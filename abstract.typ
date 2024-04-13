@@ -14,7 +14,7 @@
     #text(font: "Source Han Sans",size: 16pt)[摘#h(2em)要]
   ]
 
-  #par()[#text(size:0.5em)[#h(0.0em)]]
+  #show par: set block(spacing: 1.7em)
 
   #content
 
@@ -40,7 +40,8 @@
     #text(font: "Times New Roman",size: 16pt,weight: "bold")[Abstract]
   ]
 
-  #par()[#text(size:0.5em)[#h(0.0em)]]
+  #show par: set block(spacing: 1.7em)
+
 
   #content
 
