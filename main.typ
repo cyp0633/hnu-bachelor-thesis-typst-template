@@ -89,7 +89,9 @@
 #show heading:it=>[ // 给编号和标题设置不同字体（有点逆天）
   #v(0.3cm)
   #set par(first-line-indent: 0em)
-  #text(font:"Times New Roman")[#counter(heading).display()]
+  #if it.numbering != none [
+    #text(font:"Times New Roman")[#counter(heading).display()]
+  ]
   #text(font: "Source Han Sans")[#it.body]
   #set par(first-line-indent: 2em)
   #v(0.8625em)
