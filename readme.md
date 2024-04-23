@@ -16,3 +16,7 @@
 ## Q&A
 
 **仍然无法识别源代码目录中的字体？** 可以利用 `typst fonts` 命令验证所需字体是否能被检测到。如没有，则在 `compile` 或者 `fonts` 子命令后加参数指定字体目录，如 `typst compile main.typ --font-path ./`。你也可以直接安装所需字体，在这台计算机上就无需加上述参数。
+
+**如何添加伪代码/LaTeX 公式/……？** 伪代码可以使用 [lovelace](https://typst.app/universe/package/lovelace)，LaTeX 公式兼容可以使用 [mitex](https://typst.app/universe/package/mitex)。看来不止我一个人觉得 Typst 公式难用？
+
+**你这写得太烂了，我没法用！** 提 Issue 或者 PR，或者看一看 [别人的模板](https://github.com/Mufanc/hnuthss-template)
