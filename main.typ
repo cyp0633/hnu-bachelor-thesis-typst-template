@@ -106,8 +106,14 @@
 
 // 表题：表上五号黑体加粗 图题：图下五号宋体加粗
 #show figure.where(kind: table): set figure.caption(position: top)
-#show figure.where(kind:table): set text(font: ("Times New Roman","Source Han Sans"),size: 10.5pt,weight: "bold")
-#show figure.where(kind:image):set text(font:"Source Han Serif",size: 10.5pt,weight: "bold")
+#show figure.caption:it=>{
+  if it.kind == "i-figured-table" or it.kind == "table" {
+    text(font: ("Times New Roman","Source Han Sans"),size: 10.5pt,weight: "bold")[#it]
+  } else if it.kind == "i-figured-image" or it.kind == "image"{
+    text(font:("Times New Roman","Source Han Serif"),size: 10.5pt,weight: "bold")[#it]
+  }
+}
+#show figure.where(kind:image):set text(font:("Times New Roman","Source Han Serif"),size: 10.5pt,weight: "bold")
 
 
 // 正文从这里开始
