@@ -23,7 +23,7 @@
 
     #box(height: 0.5cm)
 
-    #frontpage.date("1919","08","10")
+    #frontpage.date("","","")
   ]
 ]
 

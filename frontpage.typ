@@ -44,7 +44,12 @@
 ]
 
 #let date(year,month,day)=[
+  // 默认为当前日期
   #text(size:14pt,font:("Times New Roman","Source Han Sans"))[
-    #year 年 #month 月 #day 日
+    #if year != "" and month != "" and day != "" [
+      #year 年 #month 月 #day 日
+    ] else [
+      #datetime.today().display("[year] 年 [month] 月 [day] 日")
+    ]
   ]
 ]
