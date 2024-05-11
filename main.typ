@@ -115,6 +115,19 @@
 }
 #show figure.where(kind:image):set text(font:("Times New Roman","Source Han Serif"),size: 10.5pt,weight: "bold")
 
+// 三线表 from: https://st1020.com/write-thesis-with-markdown-part2/
+#show table.cell.where(y: 0): set text(style: "normal", weight: "bold")
+#set table(
+  stroke: (_, y) => if y == 0 {
+    (top: 1.5pt, bottom: 0.75pt)
+  } else if y == 1 {
+    (top: 0.75pt, bottom: 0pt)
+  } else {
+    (bottom: 1.5pt, top: 0pt)
+  }
+)
+#show table: set par(leading: 0.65em)
+#set table.cell(align: center+horizon)
 
 // 正文从这里开始
 
