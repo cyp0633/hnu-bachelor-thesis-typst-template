@@ -25,7 +25,7 @@
 ]
 
 #let basic_info(title_1, title_2, name, id, class, college, supervisor) = [
-  #grid(columns: (6cm, 7.5cm),rows: 1.05cm,stroke: none,
+  #grid(columns: (6cm, 7.6cm),rows: 1.05cm,stroke: none,
     tleft[#text(size: 18pt, tracking: 0pt, weight: "bold")[论文（设计）题目:]], tright[#title_1],
     grid.hline(start: 1),
     tleft[],tright[#title_2],
