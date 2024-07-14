@@ -1,5 +1,6 @@
 #import "template.typ"
 #import "@preview/mitex:0.2.3"
+#import "bilingual-biblography.typ": bilingual-bibliography
 
 #show: template.setup.with(
   title_zh: "基于生成式预训练模型的实验报告撰写系统设计与实现",
@@ -50,11 +51,13 @@
 + 评价指标：采用BLEU、ROUGE等评价指标，对模型生成的文本进行质量评估，确保其连贯性和准确性。性能对比见@tbl:performance-comparison。
 
 #figure(caption: "不同生成模型在实验报告生成任务中的性能对比", placement: auto)[
-  #table(columns: 4, rows: 4,
-    table.header([模型],[BLEU 得分],[ROUGE 得分],[平均生成时间（秒）]),
-    [GPT-2],[25.4],[30.1],[15],
-    [GPT-3@brown2020language],[32.6],[38.4],[12],
-    [BERT@devlin2019bert],[28.9],[35.7],[18]
+  #table(
+    columns: 4,
+    rows: 4,
+    table.header([模型], [BLEU 得分], [ROUGE 得分], [平均生成时间（秒）]),
+    [GPT-2], [25.4], [30.1], [15],
+    [GPT-3@brown2020language], [32.6], [38.4], [12],
+    [BERT@devlin2019bert], [28.9], [35.7], [18],
   )
 ]<performance-comparison>
 
@@ -100,4 +103,5 @@
 
 在本文的研究和写作过程中，得到了许多同事和朋友的支持和帮助。在此特别感谢我的导师和同事们的宝贵意见和建议。同时，感谢提供数据支持和技术支持的各个单位和个人。
 
-#bibliography("example.bib", full: true, style: "gbt7714-numeric.csl")
+// 用于更好地支持标准参考文献格式，详见 bilingual-biblography.typ
+#bilingual-bibliography(bibliography: bibliography.with("example.bib"), full: true)
