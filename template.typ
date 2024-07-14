@@ -93,7 +93,7 @@
     title2 = title_zh.codepoints().slice(title1_codepoints).join()
   }
   frontpage.frontpage[
-    #align(center, image("hnu-text-logo.png", width: 8.01cm))
+    #align(center, image("assets/hnu-text-logo.png", width: 8.01cm))
 
     #align(center)[
       #text(size: 26pt)[HUNAN UNIVERSITY]

@@ -4,7 +4,7 @@
   #page(background: [
     #align(center + top)[
       #box(height: 5cm)
-      #image("hnu-logo.png", height: 9.14cm)
+      #image("assets/hnu-logo.png", height: 9.14cm)
     ]
   ])[#content]
 ]
