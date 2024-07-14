@@ -1,9 +1,18 @@
-#import "common.typ"
 #import "frontpage.typ"
 #import "authenticity.typ"
 #import "abstract.typ"
 #import "outlines.typ"
 #import "@preview/i-figured:0.2.4"
+
+// 页眉
+#let page_header = [
+  #set text(font: "Source Han Serif", size: 9pt)
+  #align(center + bottom)[
+    #pad(bottom: -6pt)[湖南大学本科生毕业论文（设计）]
+  ]
+  #line(length: 100%, stroke: 1pt)
+  #pad(top: -9.6pt)[#line(length: 100%, stroke: 0.5pt)]
+]
 
 
 #let setup(
@@ -98,7 +107,7 @@
   ]
 
   // 页码
-  set page(numbering: "I", margin: (top: 30mm, bottom: 25mm, left: 30mm, right: 20mm), header: common.page_header)
+  set page(numbering: "I", margin: (top: 30mm, bottom: 25mm, left: 30mm, right: 20mm), header: page_header)
   counter(page).update(1)
 
   // 原创性声明和版权使用授权书
